@@ -1,7 +1,4 @@
-# Implementation of RSA algorithm in Python
-# Took inspiration from my university's Discrete Structures class where I learned number theory and cryptography
 
-# To run: Open Terminal in the root of the cloned repository, type "python RSA_Algorithm/RSA_Python.py". Press Enter.
 
 import math
 from pprint import pprint
@@ -12,10 +9,7 @@ encoding[" "] = 27
 
 
 def extended_euclid(a, b):
-    # Returns (d,x,y) such that a*x + b*y = d = gcd(a,b)
-    # x and y are the Bezout coefficients
-    # Implements a recursive version of the Extended Euclidean algorithm
-    # from https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/
+
     if a == 0:
         return b, 0, 1  # Base case, since 0*0 + b*1 = 1
 
@@ -129,11 +123,7 @@ def gen_big_prime_less_than(upper_bound):
             return i
     return "No prime found in interval"
 
-# private: p, q, d
-# public: n, e
-# All values are generated locally
-# upper_bound is an upper bound on the prime numbers p and q generated
-# message is the message to encode -> encrypt -> decrypt -> decode
+
 
 
 def have_fun_rsa(upper_bound, message):
@@ -171,4 +161,4 @@ def split_into_smaller_messages(message, n):
     return messages
 
 
-have_fun_rsa(1000, "julie is eating bread")
+have_fun_rsa(1000, "noman is eating bread")
