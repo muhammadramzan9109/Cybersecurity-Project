@@ -11,13 +11,11 @@ encoding[" "] = 27
 def extended_euclid(a, b):
 
     if a == 0:
-        return b, 0, 1  # Base case, since 0*0 + b*1 = 1
+        return b, 0, 1  
 
     # By Euclid's Theorem and the recursion
     d, x1, y1 = extended_euclid(b % a, a)
 
-    # // is the integer division in Python
-    # Since b = a*q + r, for some integer q, it follows that we can write q = (b//a) and r = b - a * (b//a)
     x = y1 - (b//a)*x1
     y = x1
 
@@ -25,7 +23,6 @@ def extended_euclid(a, b):
 
 
 def extended_euclid_iterative(a, b):
-    # Same thing as above, but non-recursive
 
     x0, x1, y0, y1 = 0, 1, 1, 0
     while a != 0:
@@ -141,8 +138,6 @@ def have_fun_rsa(upper_bound, message):
             decrypted_i = rsa_decrypt(encrypted_i, n, d)
             decoded_i = decode(decrypted_i)
             pprint((encoded_i, encrypted_i, decrypted_i, decoded_i))
-
-# If gcd(message, n) > 1, we split into smaller messages
 
 
 def split_into_smaller_messages(message, n):
